@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    background-color: #111111;
+    width: 100%;
+    .navbar-item {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 10%; 
+        padding: 32px;
+
+        &:hover {
+            background-color: #222222;
+        }
+    }
+}
+
+.auth-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 16px;
+    padding: 64px;
+    flex-direction: column;
+    gap: 8px;
+    width: 30%;
+
+    .auth-input {
+        padding: 16px;
+        width: 50%;
+        border-radius: 16px;
+    }
+
+    .auth-submit {
+        border-radius: 16px;
+        outline-color: #999999;
+        padding: 16px;
+        background-color: #6666ff;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 1.5em;
+        width: 50%;
+
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: #8888ff;
+        }
+    }
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #4444ff;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 70%;
+    gap: 32px;
+
+    
+    .post-block{
+        box-shadow: rgba(0,0,0, 0.15) 1.95px 1.95px 2.6px;
+        display: flex;
+        flex-direction: column;
+        padding: 64px;
+        border-radius: 16px;
+
+        .author{
+            font-size: 1.3em;
+            margin-bottom: 32px;
+        }
+        .content {
+            margin-bottom: 64px;
+        }
+        .images{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            .image {
+                max-height: 25vh;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1000px;
+    
+    .user-avatar{
+        max-width: 20vh;
+        max-height: 10vh;
+        margin-right: 20px;
+    }
+}
