@@ -2,7 +2,7 @@ const profileCard = (data) => {
     return `
 <div class="profile-card">
     <div class="profile-avatar">
-    <img class="user-avatar" src="${localStorage.getItem('localAvatar') || ''}">
+    <img class="user-avatar" src="${localStorage.getItem('localAvatar') || 'https://amu.edu.kz/upload/default-avatar.jpg'}">
     <div class="change-avatar">поменять фото</div>
     <div class="choice-user-avatar">
 
