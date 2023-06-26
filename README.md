@@ -1,8 +1,6 @@
 # BlogPlatformAPI
 
-# Название проекта
-
-Blog platform
+# Blog platform
 
 ## Установка и запуск
 
