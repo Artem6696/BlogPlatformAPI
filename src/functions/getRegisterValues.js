@@ -11,8 +11,3 @@ export const getRegisterValues = () => {
     }
 }
 
-export const getLoginValues = () => {
-    return {
-
-    }
-}

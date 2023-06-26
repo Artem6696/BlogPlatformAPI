@@ -12,6 +12,8 @@ import Post from "./components/post";
 import getProfileDataPersonalPost from "./functions/getProfileDataPersonalPost";
 import profilePersonalPost from "./components/profilePersonalPost";
 import changeAvatar from "./functions/changeAvatar";
+import loginRequest from "./functions/loginRequest";
+import { getLoginValues } from "./functions/getLoginValues";
 
 const root = document.querySelector("#root")
 
@@ -25,15 +27,15 @@ const showReg = async () => {
   })
 }
 
-const showLogin = async () => {
+ const showLogin = async () => {
   root.innerHTML = loginForm()
 
   document.querySelector("#login-button").addEventListener('click', () => {
-    registerRequest()
+   console.log(loginRequest());
   })
 }
 
-const showProfile = async () => {
+export const showProfile = async () => {
   const userData = await getProfileData()
   const userDataPost = await getProfileDataPersonalPost()
   const personalPostUser = userDataPost.map(({_id, content, images}) => {

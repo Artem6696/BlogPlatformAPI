@@ -7,3 +7,4 @@ const getProfileDataPersonalPost = async () => {
 }
 
 export default getProfileDataPersonalPost
+//Сюда должно придти айди

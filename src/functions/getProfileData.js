@@ -7,3 +7,4 @@ const getProfileData = async () => {
 }
 
 export default getProfileData
+//сюда должно придти айди

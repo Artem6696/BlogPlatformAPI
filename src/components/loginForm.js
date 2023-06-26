@@ -2,8 +2,8 @@ const loginForm = () => {
     return `
     <div class="auth-form">
       <h2>Login</h2>
-      <input placeholder="login here" type="text" name="" id="login" class="auth-input">
-      <input placeholder="your password" type="password" name="" id="password" class="auth-input">
+      <input id="login-form"    placeholder="login here"    type="text"     name=""  class="auth-input">
+      <input id="password-form" placeholder="your password" type="password" name=""  class="auth-input">
       
       <div id="login-button" class="auth-submit">Sign up</div>
 
