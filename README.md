@@ -1,6 +1,6 @@
 # BlogPlatformAPI
 
-# Blog platform
+
 
 ## Установка и запуск
 
@@ -9,3 +9,19 @@
 
    git clone https://github.com/your-username/your-repository.git
 
+2. Перейдите в каталог проекта:
+
+
+   cd your-repository
+
+
+3. Установите зависимости:
+
+
+   npm install
+
+
+4. Запустите проект:
+
+
+   npm run start
