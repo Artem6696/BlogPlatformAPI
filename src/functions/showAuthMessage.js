@@ -18,3 +18,8 @@ export const showSuccessMessage = () => {
 <div class="auth-message done">Регистрация прошла успешно!</div>
     `
 }
+export const showSuccessPost = () => {
+    document.querySelector("#register-message").innerHTML = `
+<div class="auth-message done">Пост опубликован</div>
+    `
+}

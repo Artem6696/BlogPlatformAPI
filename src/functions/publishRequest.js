@@ -1,4 +1,4 @@
-import { showErrorMessage, showSuccessMessage } from "./showAuthMessage"
+import { showErrorMessage, showSuccessMessage, showSuccessPost } from "./showAuthMessage"
 
 const publishRequest  = async () => {
     const content = document.querySelector("#post-text").value
@@ -31,7 +31,7 @@ const publishRequest  = async () => {
         return
     }
 
-    showSuccessMessage()
+    showSuccessPost()
 }
 
 export default publishRequest
