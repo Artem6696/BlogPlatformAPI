@@ -4,7 +4,7 @@
 
 ## Установка и запуск
 
-# 1. Клонируйте репозиторий:
+### 1. Клонируйте репозиторий:
 
 
    git clone https://github.com/your-username/your-repository.git
