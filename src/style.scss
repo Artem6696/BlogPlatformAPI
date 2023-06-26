@@ -1,39 +1,50 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
+    background:#f9f8ff ;
 }
 
 #root {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 64px;
+    
     flex-direction: column;
+   background: linear-gradient(0deg, rgb(249, 248, 255) 94%, rgb(229, 228, 240));
 }
 
 .navbar {
     display: flex;
-    background-color: #111111;
+    background-color: #f9f9f9;
     width: 100%;
+    justify-content:center;
     .navbar-item {
-        color: #ffffff;
+        color: #090808;
         display: flex;
-        justify-content: center;
+        
         align-items: center;
         flex-basis: 10%; 
         padding: 32px;
-
+        cursor: pointer;
         &:hover {
-            background-color: #222222;
+            background-color: #fde5e6;
+            color: red;
+            box-shadow: 0px 10px 0px 0px rgba(249, 0, 11, 1);
         }
     }
 }
 
 .auth-form {
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color: #be98981e;
     border-radius: 16px;
     padding: 64px;
     flex-direction: column;
@@ -48,7 +59,7 @@ body {
 
     .auth-submit {
         border-radius: 16px;
-        outline-color: #999999;
+        outline-color: #c24242;
         padding: 16px;
         background-color: #6666ff;
         text-align: center;
@@ -78,14 +89,15 @@ body {
     flex-direction: column-reverse;
     width: 70%;
     gap: 32px;
-
+    margin-top: 60px;
     
-    .post-block{
-        box-shadow: rgba(0,0,0, 0.15) 1.95px 1.95px 2.6px;
+    .post-block {
+        box-shadow: 5px 5px 5px -9px rgba(34, 60, 80, 0.6);
+        gap: 32px;
         display: flex;
         flex-direction: column;
         padding: 64px;
-        border-radius: 16px;
+        background-color: #fefefe;
 
         .author{
             font-size: 1.3em;
@@ -109,14 +121,195 @@ body {
     }
 }
 
-.profile-card {
+
+.profile-container {
+    margin-top: 60px;
+    max-width: 90%;
     display: flex;
     flex-direction: row;
-    margin-right: 1000px;
-    
-    .user-avatar{
-        max-width: 20vh;
-        max-height: 10vh;
-        margin-right: 20px;
+    margin-left: 20px;
+    gap: 32px;
+
+
+    .profile-information{
+        box-shadow: -8px 3px 32px 7px rgba(34, 60, 80, 0.2);
+        background-color: #fefefe;
+        height: 90vh;
+        width: 345px;
+        .profile-avatar{
+            text-align: center;
+            font-size: small;
+
+            
+            .choice-user-avatar_button {
+                width: 70px;
+                height: 40px;
+                line-height: 42px;
+                padding: 0;
+                border: none;
+                
+              }
+              
+              .choice-user-avatar_button.active {
+                color: #f0094a;
+                background: transparent;
+                box-shadow:none;
+              }
+              
+              .choice-user-avatar_button:before{
+                content: 'фото профиля обновлено';
+                position: absolute;
+                top: 2px;
+                right: 0;
+                height: 2.5px;
+                width: 0;
+                background: #f0094a;
+                box-shadow:
+                  -1px -1px 5px 0px #fff,
+                  7px 7px 20px 0px #0003,
+                  4px 4px 5px 0px #0002;
+                transition: 900ms ease all;
+              }
+              
+              .choice-user-avatar_button:after {
+                right: inherit;
+                top: inherit;
+                left: 0;
+                bottom: 0;
+              }
+              
+              .choice-user-avatar_button.active:before,
+              .choice-user-avatar_button.active:after {
+                width: 100%;
+                transition: 1100ms ease-out;
+              }
+
+
+              
+
+            .change-avatar{
+                cursor: pointer;
+                margin-bottom: 40px;
+            }
+            .choice-user-avatar{
+                margin-bottom: 40px;
+            }
+            .user-avatar{
+                max-width: 345px;
+            }
+        }
+        .profile-title {
+            display: flex;
+            flex-direction: column;
+           justify-content: center; 
+           
+
+           .login-container{
+                margin-left: 60px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                
+                .username-img{
+                    width: 32px;
+                    height: 32px;
+                    padding-top: 8px;
+                    margin-right: 15px;
+                }
+                .username h3{
+                
+                    margin: 2px;
+                }
+           }
+           .username-container{
+                margin-left: 60px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                .username-img{
+                    width: 32px;
+                    height: 32px;
+                    padding-top: 8px;
+                    margin-right: 15px;
+                }
+                .username h3{
+                    margin: 2px;
+                }
+           }
+           .user-number-container{
+                margin-left: 60px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                .number-img{
+                    width: 32px;
+                    height: 32px;
+                    padding-top: 8px;
+                    margin-right: 15px;
+                }
+                .user-value h4{
+                    margin: 2px;
+                }
+           }
+           .user-email-container{
+                margin-left: 60px;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                .email-img{
+                    width: 32px;
+                    height: 32px;
+                    padding-top: 8px;
+                    margin-right: 15px;
+                }
+                .user-value h4{
+                    margin: 2px;
+                }
+           }
+        }
     }
+    .profile-posts{
+        
+        display: flex;
+        flex-direction: column-reverse;
+        width: 65%;
+        gap: 22px;
+
+        .post-block {
+        box-shadow: 5px 5px 5px -9px rgba(34, 60, 80, 0.6);
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        padding: 64px;
+        background-color: #fefefe;
+        
+            .author{
+                display: flex;
+                flex-direction: row;
+                
+                justify-content:flex-end
+            }
+            .post-title{
+                
+                margin: 0;
+            }
+            
+            .images{
+                display: flex;
+                width: 100%;
+                flex-wrap: nowrap;
+                
+                gap: 8px;
+                .image {
+                    display: flex;
+                    max-height: 25vh;
+                    max-width: 35%;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+   display: none;
 }

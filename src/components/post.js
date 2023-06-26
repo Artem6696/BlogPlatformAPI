@@ -10,7 +10,7 @@ const Post = async (postData) => {
     }
     return `
     <div class="post-block">
-        <div class="author">Author: ${authorData.login}</div>
+        <div class="author">Author:  ${authorData.login}</div>
         <div class="content">${postData.content}</div>
         <div class="images">${imagesHTMl}</div>
     </div>

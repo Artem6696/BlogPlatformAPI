@@ -6,7 +6,7 @@ const registerRequest = async () => {
 
     try {
 
-        console.log(JSON.stringify(getRegisterValues()))
+        // console.log(JSON.stringify(getRegisterValues()))
         const response = await fetch(url, {
             method: "POST",
             headers: {

@@ -9,8 +9,13 @@ import "./style.scss";
 import publishRequest from "./functions/publishRequest";
 import getPostData from "./functions/getPostData";
 import Post from "./components/post";
+import getProfileDataPersonalPost from "./functions/getProfileDataPersonalPost";
+import profilePersonalPost from "./components/profilePersonalPost";
+import changeAvatar from "./functions/changeAvatar";
 
 const root = document.querySelector("#root")
+
+
 
 const showReg = async () => {
   root.innerHTML = registrationForm()
@@ -30,9 +35,19 @@ const showLogin = async () => {
 
 const showProfile = async () => {
   const userData = await getProfileData()
-
-  root.innerHTML = profileCard(userData)
+  const userDataPost = await getProfileDataPersonalPost()
+  const personalPostUser = userDataPost.map(({_id, content, images}) => {
+    return profilePersonalPost(_id, content, images)
+  })
+  const personalPostUserHTML = personalPostUser.join("")
+  root.innerHTML = `
+        <div class="profile-container">
+          <div class="profile-information">${profileCard(userData)}</div>
+          <div class="profile-posts">${personalPostUserHTML}</div>
+        </div>
+  `
   
+  await changeAvatar()
 }
 
 const showFeed = async () => {
