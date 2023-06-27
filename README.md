@@ -7,7 +7,7 @@
 ### 1. Клонируйте репозиторий:
 
 
-   git clone https://github.com/your-username/your-repository.git
+   git clone [https://github.com/your-username/your-repository.git](https://github.com/Artem6696/BlogPlatformAPI.git)
 
 ### 2. Перейдите в каталог проекта:
 
